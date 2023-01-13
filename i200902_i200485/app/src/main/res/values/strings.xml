@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Chatify</string>
+
+    <!---  Strings for onBoarding screen-->
+
+    <!--    Titles-->
+    <string name="onBoardingTitle1">Welcome to Chatify</string>
+    <string name="onBoardingTitle2">Chat with your friends</string>
+    <string name="onBoardingTitle3">End to end encryption</string>
+
+    <!--    Descriptions-->
+    <string name="onBoardingDesc1">Chatify is a messaging app that allows you to chat with your friends</string>
+    <string name="onBoardingDesc2">Chatify allows you to chat with your friends in real time</string>
+    <string name="onBoardingDesc3">Chatify uses end to end encryption to ensure your messages are secure</string>
+
+    <!--    Buttons-->
+    <string name="onBoardingButtonSkip">Skip</string>
+    <string name="onBoardingButtonNext">Next</string>
+    <string name="onBoardingButtonStarted">Get Started</string>
+
+    <!--    Othes strings-->
+    <string name="sentImageMessage">Image</string>
+</resources>

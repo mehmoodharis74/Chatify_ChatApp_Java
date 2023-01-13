@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:background="@color/buttonColor"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <LinearLayout
+        android:layout_weight="1"
+        android:id="@+id/mainAppBarLinearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:orientation="horizontal">
+
+<!--        <androidx.appcompat.widget.AppCompatImageButton-->
+<!--            android:layout_weight="1"-->
+<!--            android:id="@+id/mainAppBarSearchButton"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:backgroundTint="@color/buttonColor"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="10dp"-->
+<!--            android:src="@drawable/ic_baseline_search_24" />-->
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/mainAppBarProfileImage"
+            android:background="@drawable/image_background"
+            android:scaleType="centerCrop"
+            android:layout_width="40dp"
+            app:riv_oval="true"
+            android:layout_height="40dp"/>
+
+        <TextView
+            android:id="@+id/appLogoTextView"
+            android:layout_weight="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/mainAppBarSearchButton"
+            android:text="@string/app_name"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:textSize="26sp" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+
+            android:id="@+id/signOutAppBarButton"
+            android:layout_width="30dp"
+            android:backgroundTint="@color/buttonColor"
+            android:layout_height="30dp"
+            app:riv_oval="true"
+            app:riv_corner_radius="10dp"
+
+            android:src="@drawable/ic_baseline_exit_to_app_24" />
+    </LinearLayout>
+
+<!--    main Linear Layout-->
+    <RelativeLayout
+        android:layout_weight="10"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:background="@drawable/main_chat_layout_design"
+
+        android:layout_height="0dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/mainChatsRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/mainSearchChatButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/icon_background"
+            android:padding="15dp"
+            android:src="@drawable/ic_baseline_message_24" />
+    </RelativeLayout>
+
+</LinearLayout>

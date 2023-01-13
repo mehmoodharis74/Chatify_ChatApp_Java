@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="4dp"
+    android:layout_marginTop="12dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/receiveMessageImage"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:background="@drawable/image_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:riv_oval="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/receiveMessageFrameLayout"
+        android:layout_width="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/receiveMessageImage"
+        app:layout_constraintTop_toTopOf="parent"
+        android:padding="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/receive_message_layout_design"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/messageImageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/receiveMessageFrameLayout"
+            app:layout_constraintTop_toTopOf="parent"
+            android:visibility="gone"
+            android:minHeight="100dp"
+            android:minWidth="100dp"
+            />
+        <TextView
+            android:id="@+id/textMessage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            app:layout_constraintEnd_toEndOf="@id/receiveMessageFrameLayout"
+            app:layout_constraintTop_toBottomOf="@id/messageImageView"
+            app:layout_constraintWidth_max="wrap"
+            app:layout_constraintWidth_percent="0.8"
+            android:textColor="@color/white"
+
+            android:textIsSelectable="true"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/textTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@+id/receiveMessageImage"
+        android:layout_marginTop="4dp"
+        android:layout_marginStart="4dp"
+        android:textSize="10sp"
+        android:text="@string/app_name"
+        app:layout_constraintTop_toBottomOf="@+id/receiveMessageFrameLayout"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

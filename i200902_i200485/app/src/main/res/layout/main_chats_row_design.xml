@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/mainChatSingleRow"
+    android:layout_margin="1dp"
+    android:layout_height="wrap_content">
+<!--        inner main linear layout-->
+<LinearLayout
+    android:padding="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+<!--            inner linear layout for image-->
+<FrameLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+
+    android:orientation="vertical">
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/mainChatRowProfileImage"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        app:riv_oval="true"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/onboard3"/>
+    <ImageView
+        android:id="@+id/onlineCircle"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        app:riv_oval="true"
+        android:scaleType="centerCrop"
+        android:layout_gravity="end"
+        android:layout_marginEnd="2dp"
+        android:visibility="invisible"
+        android:background="@drawable/online_chat_circle"
+        />
+</FrameLayout>
+<!--            inner linear layout for text-->
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="5dp"
+    android:orientation="vertical">
+<!--    inner relative layout for name and time-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/mainChatRowUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="User Name"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+             />
+
+<!--        <TextView-->
+<!--            android:id="@+id/mainChatRowLastMessageTime"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_marginTop="5dp"-->
+
+<!--            android:text="Time"-->
+<!--            android:textColor="#424141"-->
+<!--            android:textSize="12sp" />-->
+    </RelativeLayout>
+<!--    inner relative layout for last message and sticker-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        >
+
+<!--        <androidx.appcompat.widget.AppCompatImageView-->
+<!--            android:id="@+id/mainChatRowLastMessageSeenImage"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:src="@drawable/ic_baseline_readed_all_24" />-->
+
+        <TextView
+            android:id="@+id/mainChatRowLastMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="0dp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="Last Message"
+            android:textSize="15sp" />
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>
+
+
+</LinearLayout>

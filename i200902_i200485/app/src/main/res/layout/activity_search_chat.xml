@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/buttonColor"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    tools:context=".activities.SearchChatActivity">
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/mainAppBarSearchChatBackArrowButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:background="@drawable/icon_background"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="12dp"
+
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Search Contact"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/mainAppBarSearchChatBackArrowButton"
+        app:layout_constraintTop_toTopOf="@id/mainAppBarSearchChatBackArrowButton"/>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:background="@drawable/main_chat_layout_design"
+    android:layout_marginTop="10dp"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintTop_toBottomOf="@id/mainAppBarSearchChatBackArrowButton"
+    >
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/searchChatRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+android:clipToPadding="false"
+        android:overScrollMode="never"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="10dp"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loader"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:lottie_rawRes="@raw/loading"
+        app:lottie_autoPlay="true"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:lottie_loop="true"/>
+</FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

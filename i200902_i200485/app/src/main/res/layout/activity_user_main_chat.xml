@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    tools:context=".activities.userMainChat_activity">
+
+<!--    toolbar layout-->
+    <LinearLayout
+        android:id="@+id/userChatAppBar"
+        android:layout_width="match_parent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:gravity="center_vertical"
+     android:background="@color/buttonColor"
+        android:elevation="10dp"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        tools:ignore="MissingConstraints">
+        <ImageButton
+            android:layout_weight="1"
+            android:id="@+id/userMainChatActivityBackArrowBtn"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/buttonColor"
+            android:padding="0dp"
+            android:layout_marginRight="4dp"
+            android:src="@drawable/ic_baseline_arrow_back_24"
+            />
+        <com.makeramen.roundedimageview.RoundedImageView
+
+            android:id="@+id/userMainChatActivityProfileImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="0dp"
+            android:scaleType="centerCrop"
+            app:riv_oval="true"
+            android:background="@drawable/image_background"
+            android:src="@drawable/ic_baseline_insert_photo_24"/>
+        <LinearLayout
+            android:layout_weight="8"
+            android:layout_width="0dp"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/userMainChatActivityProfileName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:layout_toRightOf="@+id/userMainChatActivityProfileImage"
+            />
+        <TextView
+            android:id="@+id/userMainChatActivityOnlineStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+           android:textColor="@color/grey"
+            android:layout_toRightOf="@id/userMainChatActivityProfileImage"
+            android:layout_alignParentBottom="true"
+android:textSize="12sp"
+            />
+        </LinearLayout>
+    </LinearLayout>
+
+<LinearLayout
+    android:layout_width="match_parent"
+    app:layout_constraintTop_toBottomOf="@+id/userChatAppBar"
+    app:layout_constraintBottom_toTopOf="@id/userMainChatActivityBottomLayout"
+    android:layout_height="0dp"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    >
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/userMainChatActivityRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        />
+
+</LinearLayout>
+
+    <!--        bottom layout-->
+    <LinearLayout
+        android:id="@+id/userMainChatActivityBottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:layout_weight="1"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:padding="5dp">
+
+        <LinearLayout
+            android:layout_weight="9"
+            android:id="@+id/userMainChatActivityBottomMessageInputLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/type_message_layout_design"
+            android:orientation="horizontal"
+            android:padding="2dp">
+
+            <EditText
+                android:id="@+id/userMainChatActivityTypeMessageInputText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxHeight="100dp"
+                android:layout_marginLeft="5dp"
+                android:background="#F1F1F1"
+                android:isScrollContainer="true"
+                android:layout_weight="9"
+               android:inputType="textMultiLine"
+                android:hint="Type a message"
+                android:minHeight="40dp"
+                android:layout_marginStart="20dp"
+                android:paddingRight="5dp"
+                android:textColorHint="@color/black" />
+
+            <ImageButton
+                android:id="@+id/userMainChatAddImageBtn"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_baseline_camera_24"
+                android:backgroundTint="#F1F1F1"
+                android:layout_gravity="bottom"
+                />
+
+        </LinearLayout>
+
+
+        <ImageButton
+            android:id="@+id/userMainChatActivitySendMessageButton"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/send_button_background_design"
+            android:elevation="5dp"
+            android:padding="10dp"
+            android:src="@drawable/ic_baseline_send_24" />
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

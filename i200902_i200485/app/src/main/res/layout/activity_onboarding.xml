@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:layout_height="match_parent"
+    >
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/onBoardViewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_editor_absoluteX="1dp"
+        app:layout_editor_absoluteY="1dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="39dp">
+
+    </androidx.viewpager.widget.ViewPager>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_below="@+id/onBoardViewPager"
+        android:layout_alignParentBottom="true"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <Button
+            android:id="@+id/OnBoardGetStartBtn"
+            style="@style/ButtonStyle"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentBottom="false"
+            android:text="@string/onBoardingButtonStarted"
+            android:visibility="invisible"
+             />
+
+        <LinearLayout
+            android:id="@+id/onBoardingDots"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/OnBoardGetStartBtn"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/onBoardNextBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="58dp"
+            android:layout_below="@+id/OnBoardGetStartBtn"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+
+            android:backgroundTint="@color/white"
+            android:src="@drawable/ic_baseline_right_24" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/skipText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/onBoardingButtonSkip"
+        app:layout_constraintEnd_toEndOf="@+id/onBoardViewPager"
+        tools:layout_editor_absoluteY="2dp"
+        android:textSize="16sp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center_horizontal"
+    tools:context=".activities.otp_verification_activity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/verifyOtpAnimation"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_margin="20dp"
+        app:lottie_rawRes="@raw/otp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        android:text="Code Verification"
+        android:textColor="@color/black"
+        android:textSize="30dp"/>
+    <TextView
+        android:id="@+id/textToHintPhoneNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        android:text="Enter the 6 digit code sent to your phone number"
+        android:textColor="#878686"
+        android:textSize="16dp"/>
+
+    <com.chaos.view.PinView
+        android:id="@+id/pinView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"
+        android:cursorVisible="true"
+        android:inputType="number"
+        android:maxLength="6"
+        android:textColor="@color/buttonColor"
+        app:cursorColor="@color/buttonColor"
+        android:itemBackground="#E3F0FF"
+        app:cursorWidth="2dp"
+        app:hideLineWhenFilled="true"
+        app:itemCount="6"
+        app:itemHeight="50dp"
+        app:itemRadius="5dp"
+        app:itemSpacing="5dp"
+        app:itemWidth="50dp"
+        app:lineColor="@color/buttonColor"
+        style="@style/PinWidget.PinView"
+        app:lineWidth="1dp" />
+
+    <TextView
+        android:id="@+id/resendOtp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:layout_margin="10dp"
+        android:text="Resend OTP"
+        android:textColor="@color/buttonColor"
+        android:textSize="16dp"/>
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    android:layout_gravity="center">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loader"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        app:lottie_rawRes="@raw/loading"
+        app:lottie_autoPlay="true"
+        android:layout_gravity="center"
+        android:visibility="invisible"
+        app:lottie_loop="true"/>
+
+    <com.google.android.material.button.MaterialButton
+        android:text="Verify OTP"
+        android:layout_gravity="center"
+        android:id="@+id/BtnVerifyOTP"
+        style="@style/ButtonStyle"
+        />
+</FrameLayout>
+</LinearLayout>

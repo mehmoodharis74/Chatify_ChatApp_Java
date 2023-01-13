@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:gravity="center_horizontal"
+    tools:context=".activities.main_login_signup_activity">
+
+ <com.airbnb.lottie.LottieAnimationView
+         android:id="@+id/mainLoginRegisterPageAnimation"
+         android:layout_width="match_parent"
+         android:layout_height="200dp"
+     android:layout_margin="20dp"
+         app:lottie_rawRes="@raw/signup"
+         app:lottie_autoPlay="true"
+         app:lottie_loop="true"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="50dp"
+        android:orientation="horizontal">
+            <!--<androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/phoneCountrySpinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />-->
+
+                <com.hbb20.CountryCodePicker
+                    android:id="@+id/phoneCountrySpinner"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:ccp_autoDetectCountry="true"
+                    app:ccp_showArrow="false"
+                    app:ccp_showNameCode="false"/>
+
+
+
+    <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/mainRegisterPhoneInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Phone Number"
+                android:inputType="phone" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+    <com.google.android.material.button.MaterialButton
+       style="@style/ButtonStyle"
+        android:id="@+id/mainRegisterGetOtpBtn"
+        android:text="Get OTP"
+        />
+    <androidx.core.widget.ContentLoadingProgressBar
+        android:id="@+id/mainRegisterProgressBar"
+        android:layout_margin="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"/>
+</LinearLayout>
